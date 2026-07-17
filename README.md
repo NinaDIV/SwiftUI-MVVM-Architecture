@@ -1,22 +1,45 @@
-# Proyecto MVVM con SwiftUI 📱
+# SwiftUI MVVM Architecture
 
-## Descripción
-Este proyecto implementa el patrón de diseño MVVM utilizando SwiftUI. Permite registrar, listar, editar y eliminar tareas de forma persistente con UserDefaults. También incluye una versión adaptada para registrar cursos con promedios de prácticas y laboratorios.
+![Swift](https://img.shields.io/badge/Swift-F05138?style=flat&logo=swift&logoColor=white)
+![SwiftUI](https://img.shields.io/badge/SwiftUI-0D96F6?style=flat&logo=swift&logoColor=white)
+![Xcode](https://img.shields.io/badge/Xcode-147EFB?style=flat&logo=xcode&logoColor=white)
+
+Implementacion del patron de diseno **MVVM** (Model-View-ViewModel) utilizando **SwiftUI**. Permite registrar, listar, editar y eliminar tareas y cursos de forma persistente con UserDefaults.
 
 ## Funcionalidades
-✅ Registrar tareas y cursos  
-✅ Listar tareas y cursos  
-✅ Editar descripción de tareas y datos de cursos  
-✅ Eliminar tareas y cursos  
-✅ Uso de UserDefaults para almacenamiento persistente  
-✅ Uso de SwiftUI con etiquetas @State, @StateObject, @Published y Binding
 
-## Estructura del proyecto
-- **Vista**: contiene las vistas SwiftUI.
-- **Modelo**: contiene los modelos de datos (`ModeloTareas.swift`).
-- **ViewModel**: gestiona la lógica de negocio (`viewmodelTareas.swift`).
+- Registrar tareas y cursos
+- Listar tareas y cursos con vista dinamica
+- Editar descripcion de tareas y datos de cursos
+- Eliminar tareas y cursos con confirmacion
+- Persistencia con UserDefaults
+- Calculo de promedios de practicas y laboratorios
 
-## Instalación
-1. Clona el repositorio:
-```bash
-git clone https://github.com/tu-usuario/ProyectoMVVM.git
+## Arquitectura MVVM
+
+```
+â”œâ”€â”€ Model/          # Estructuras de datos (Task, Course)
+â”œâ”€â”€ View/           # Vistas declarativas en SwiftUI
+â”œâ”€â”€ ViewModel/      # Logica de negocio y estado
+â””â”€â”€ App.swift       # Entry point
+```
+
+| Capa | Responsabilidad |
+|------|----------------|
+| **Model** | Estructuras de datos puras |
+| **View** | UI declarativa con SwiftUI |
+| **ViewModel** | Logica de negocio, persistencia, estado observable |
+
+## Tecnologias
+
+- **Lenguaje:** Swift 5.9+
+- **UI:** SwiftUI
+- **IDE:** Xcode 15+
+- **Persistencia:** UserDefaults
+
+## Ejecutar el proyecto
+
+1. Clona el repositorio
+2. Abre el `.xcodeproj` en Xcode
+3. Selecciona un simulador iOS
+4. `Cmd + R` para compilar y ejecutar
